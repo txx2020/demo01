@@ -374,7 +374,7 @@ int mainpage5503()
 	return 0;
 }
 
-// page 56 迭代法球方程x=cosx的根，
+// page 56 迭代法求方程x=cosx的根，
 
 
 
