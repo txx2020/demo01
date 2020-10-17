@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
 
 // page 09 浮点型
 int mainpage09()
@@ -336,7 +337,7 @@ int mainpage5501()
 }
 
 // page 55 对上面程序进行的修正
-int main()
+int mainpage5502()
 {
 	int i, sum;
 	i = 0;
@@ -351,7 +352,29 @@ int main()
 	return 0;
 }
 
+// page 55 算圆周率，这里用到了math头文件
+int mainpage5503()
+{
+	int s;
+	float n, t, pi;
+	t = 1.0;
+	pi = 0;
+	n = 1.0;
+	s = 1;
+	while (fabs(t) >= 1e-6)
+	{
+		pi = pi + t;
+		n += 2.0;
+		s = -s;
+		t = s / n;
+	}
+	pi = pi * 4;
+	printf("pi=%f\n",pi);
+	system("pause");
+	return 0;
+}
 
+// page 56 迭代法球方程x=cosx的根，
 
 
 
