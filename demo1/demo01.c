@@ -294,12 +294,62 @@ int mainpage4902()
 	return 0;
 }
 
-//
+// page 51 习题4.20
+int mainpage51()
+{
+	int x, y, z;
+	x = 0;
+	y = 2;
+	z = 3;
+	switch (x)
+	{
+	case 0:switch (y==2)//判断y是否等于2，如果y的值是2，那就执行语句
+		{
+			case 1:printf("$1"); break;//此处是程序的伏笔，看读者是否记得程序遇见break就停止
+			case 2:printf("*1"); break;
+		}
+	case 1:switch (z)//程序执行case1 所以就跳过case2的执行条件
+		{
+			case 1:printf("$2");
+			case 2:printf("*2"); break;
+			default:printf("#2");//只执行此处
+		}
+	}
+	system("pause");
+	return 0;     
+}
 
+// page 55 累加平方根，n个数的平方的和，当满足条件后，打印n和和,主要是考察循环语句的使用
+int mainpage5501()
+{
+	int i, sum;
+	i = 0;
+	sum = 0;
+	while (sum < 10000) //如果不满足此处的条件，那么大括号内的运算一次也不执行
+	{
+		sum += i * i; //sum累加i的平方
+		i++;
+	}
+	printf("i=%d \nsum=%d \n",i,sum);
+	system("pause");
+	return 0;
+}
 
-
-
-
+// page 55 对上面程序进行的修正
+int main()
+{
+	int i, sum;
+	i = 0;
+	sum = 0;
+	while (sum < 10000)
+	{
+		i++;
+		sum += i * i;
+	}
+	printf("i=%d\nsum=%d\n",i,sum);
+	system("pause");
+	return 0;
+}
 
 
 
