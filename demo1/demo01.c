@@ -439,7 +439,7 @@ int mainpage60()
 }
 
 // page 61 倒三角
-int main()
+int mainpage61()
 {
 	int k, i, j;
 	for ( i = 0; i < 4; i++)
@@ -459,9 +459,56 @@ int main()
 	return 0;
 }
 
+// page 62  寻找素数
+int mainpage6201()
+{
+	int k, i, tag;
+	for ( i = 2; i<= 100; i++)
+	{
+		tag = 0;
+		for ( k = 2; k < i; k++)
+		{
+			if (i%k==0)
+			{
+				tag = 1;
+			}
+			/*if (tag == 0)
+			{
+				printf("%d,", i);
+			}*/
+		}
+		if (tag == 0)
+		{
+			printf("%d,", i);
+		}
+	}
+	system("pause");
+	return 0;
+}
 
-
-
+// page 62 寻找素数改进版
+int mainpage6202()
+{
+	int k, i, tag;
+	printf("2, ");
+	for ( i = 3; i <=100; i+=2)
+	{
+		tag = 0;
+		for ( k = 2;tag==0&& k < sqrt(i); k++)
+		{
+			if (i % k == 0)
+			{
+				tag = 1;
+			}
+		}
+		if (tag == 0) //两次犯了同样的错误
+		{
+			printf("%d, ", i);
+		}
+	}
+	system("pause");
+	return 0;
+}
 
 
 
