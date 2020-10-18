@@ -411,12 +411,12 @@ int mainpage58()
 	return 0;
 }
 
-// page 59 累加算法 
-int main()
+// page 59 累加算法，1+……+100
+int mainpage59()
 {
 	int i, sum;
 	sum = 0;
-	for ( i = 0; i < 100; i++)
+	for ( i = 0; i <= 100; i++) //这里一定要<=100
 	{
 		sum += i;
 	}
@@ -425,10 +425,39 @@ int main()
 	return 0;
 }
 
+// page 60 计算圆面积
+int mainpage60()
+{
+	double r, s, Pi = 3.1416;
+	for ( r = 0.5; r <= 2.5; r+=0.5) //+=不可忘记
+	{
+		s = Pi * r * r; //计算圆面积
+		printf("r=%3.1f s=%f\n", r, s);
+	}
+	system("pause");
+	return 0;
+}
 
-
-
-
+// page 61 倒三角
+int main()
+{
+	int k, i, j;
+	for ( i = 0; i < 4; i++)
+	{
+		for ( k = 1; k <= i; k++)
+		{
+			printf(" "); //没有空格是左对齐，一个空格是中心对齐，两个空格是右对齐
+		}
+		for ( j = 0; j <7-i*2; j++)				//				k的变化			j的变化
+		{										//  i=0			1				0,1,2,3,4,5,6,7
+			printf("*");						//  i=1			1,2				0,1,2,3,4,5
+		}										//  i=2			1,2,3			0,1,2,3
+		printf("\n");							//  i=3			1,2,3,4			0,1
+												//  i=4			(当i等于4时退出循环)
+	}											
+	system("pause");
+	return 0;
+}
 
 
 
