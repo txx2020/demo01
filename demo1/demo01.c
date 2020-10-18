@@ -375,7 +375,20 @@ int mainpage5503()
 }
 
 // page 56 迭代法求方程x=cosx的根，
-
+int main()
+{
+	double x1, x2;
+	x1 = 0.0;
+	x2 = cos(x1);
+	while (fabs(x2 - x1) > 1e-6)
+	{
+		x1 = x2;
+		x2 = cos(x1);
+	}
+	printf("x=%f\n", x2);
+	system("pause");
+	return 0;
+}
 
 
 
