@@ -375,7 +375,7 @@ int mainpage5503()
 }
 
 // page 56 迭代法求方程x=cosx的根，
-int main()
+int mainpage56()
 {
 	double x1, x2;
 	x1 = 0.0;
@@ -390,9 +390,40 @@ int main()
 	return 0;
 }
 
-// 
+// page 58 计算Fibonacci数列,直到循环体中有带条件的非正常出口 主要考察do-while语句
+//f0=0,f1=1,f2=1,f3=2,f4=3,……,fn=fn-2 + fn-1.
+int mainpage58()
+{
+	int f1, f2, f;
+	f1 = 0;
+	f2 = 1;
+	do
+	{
+		f = f1 + f2;
+		f1 = f2;
+		f2 = f;
+		printf("%d  %d  %d\n", f1, f2, f);
+	} while (f2 < 1000);
+	
+	printf("F=%d\n", f2);
+	
+	system("pause");
+	return 0;
+}
 
-
+// page 59 累加算法 
+int main()
+{
+	int i, sum;
+	sum = 0;
+	for ( i = 0; i < 100; i++)
+	{
+		sum += i;
+	}
+	printf("sum=%d\n", sum);
+	system("pause");
+	return 0;
+}
 
 
 
