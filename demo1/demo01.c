@@ -621,7 +621,7 @@ int mainpage6601()
 }
 
 // page 66 习题计算
-int main()
+int mainpgage6602()
 {
 	int i, j, m = 0;
 	for ( i = 1; i <= 15; i+=4)
@@ -632,6 +632,115 @@ int main()
 		}
 	}
 	printf("%d\n", m);
+	system("pause");
+	return 0;
+}
+
+// page 66 习题计算
+int mainpage6603()
+{
+	int n = 10;
+	while (n > 7) //当满足()内的条件时，立即执行语句，所以第一次打印的数字是9，与if语句不一样
+	{
+		n--;
+		printf("%d\n", n);
+	}
+	system("pause");
+	return 0;
+}
+// page 67 习题计算
+int mainpage6701()
+{
+	int x = 3;
+	do
+	{
+		printf("%3d", x -= 2);
+	} while (!(--x));
+	system("pause");
+	return 0;
+}
+
+// page 67 习题计算
+int mainpage6702()
+{
+	int i, sum;
+	for ( i = 1; i < 6; i++)
+	{
+		sum += sum;
+	}
+	printf("%d\n", sum);
+	system("pause");
+	return 0;
+}
+
+// page 67 习题计算
+int mainpage6703()
+{
+	int y = 10;
+	for ( ; y > 0; y--)
+	{
+		if (y%3==0)
+		{
+			printf("%d\n", --y);
+			continue;
+		}
+	}
+	system("pause");
+	return 0;
+}
+
+// page 67 习题计算
+int mainpage6704()
+{
+	int x;
+	for ( x = 0; x < 6; x++)
+	{
+		printf((x % 2) ? ("**不可以整除%d") : ("##可以整除%d\n"), x); //三目运算符，a?b:c,判断a，执行时，b是假，c是真；
+	}
+	system("pause");
+	return 0;
+}
+
+// page 67 习题计算
+int mainpage6705()
+{
+	int i ;
+	for ( i = 1; i < 5; i++)
+	{
+		if (i%2)
+		{
+			printf("*");
+		}
+		else
+		{
+			continue;
+		}
+		printf("#");
+	}
+	printf("$\n");
+	system("pause");
+	return 0;
+}
+
+// page 68 习题计算
+int main()
+{
+	int x, j;
+	for ( i = 1; i < 100; i++)
+	{
+		x = i;
+		if (++x%2==0)
+		{
+			if (++x%3==0)
+			{
+				if (++x%7==0)
+				{
+					printf("%d", x);
+				}
+			}
+		}
+	}
+	printf("\n");
 	system("pause");
 	return 0;
 }
