@@ -603,18 +603,35 @@ int mainpage65()
 }
 
 // page 66 习题计算
-int main()
+int mainpage6601()
 {
 	int k, j, s;
-	for ( k = 2; k < 6; k++,k++) //两个k++就是一次加2
+	for ( k = 2; k < 6; k++,k++) //两个k++就是一次加2,等价于 i+=2
 	{
 		s = 1;
 		for ( j = k; j < 6; j++)
 		{
 			s += j;
+			printf("%d\n", s);
 		}
 	}
 	printf("%d\n", s);
+	system("pause");
+	return 0;
+}
+
+// page 66 习题计算
+int main()
+{
+	int i, j, m = 0;
+	for ( i = 1; i <= 15; i+=4)
+	{
+		for ( j = 3; j <= 19; j+=4)
+		{
+			m++;
+		}
+	}
+	printf("%d\n", m);
 	system("pause");
 	return 0;
 }
