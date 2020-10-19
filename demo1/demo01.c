@@ -510,9 +510,42 @@ int mainpage6202()
 	return 0;
 }
 
+// page 63 break语句，累加至满足某个条件，算出满足此条件的值
+int mainpage63()
+{
+	int i, s;
+	s = 0;
+	for ( i = 0; ; i++)
+	{
+		s = s + i;
+		if (s>5000)
+		{
+			break;
+		}
+	}
+	printf("s=%d,i=%d\n", s, i);
+	system("pause");
+	return 0;
+}
 
-
-
+// page 64 continue语句执行示例
+int main()
+{
+	int k=0,s=0,i;
+	for ( i = 1; i <= 5; i++)
+	{
+		s = s + i;
+		if (s>5)
+		{
+			printf("* * * * i=%d,s=%d,k=%d\n", i, s, k);
+			continue; //
+		}
+		k = k + s;
+		printf("i=%d,s=%d,k=%d\n", i, s, k);
+	}
+	system("pause");
+	return 0;
+}
 
 
 
