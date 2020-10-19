@@ -403,7 +403,7 @@ int mainpage58()
 		f1 = f2;
 		f2 = f;
 		printf("%d  %d  %d\n", f1, f2, f);
-	} while (f2 < 1000);
+	} while (f2 < 1000);					//执行顺序，先执行do后面的{},然后判断while后面的()，若为1，继续执行do，若为0，跳出循环
 	
 	printf("F=%d\n", f2);
 	
@@ -548,7 +548,7 @@ int mainpage6401()
 }
 
 // page 64 熟悉do-while语句
-int main()
+int mainpage6402()
 {
 	int x, max;
 	printf("Enter -1 to end:\n");
@@ -575,6 +575,21 @@ int main()
 	return 0;
 }
 
-
+// page 64 从若干个输入的正整数中，选出最大值，用-1结束
+int main()
+{
+	int x, max;
+	printf("Enter -1 to end:\n");
+	do
+	{
+		printf("Enter x :");
+		scanf("%d", &x);
+	} while (x<0&&x!= -1);
+	max = x;
+	while (x!= -1)
+	{
+		printf("Enter x :");
+	}
+}
 
 
