@@ -520,7 +520,7 @@ int mainpage63()
 		s = s + i;
 		if (s>5000)
 		{
-			break;
+			break; //在循环结构中终止本层循环体，提前结束本层循环
 		}
 	}
 	printf("s=%d,i=%d\n", s, i);
@@ -529,7 +529,7 @@ int mainpage63()
 }
 
 // page 64 continue语句执行示例
-int main()
+int mainpage6401()
 {
 	int k=0,s=0,i;
 	for ( i = 1; i <= 5; i++)
@@ -538,7 +538,7 @@ int main()
 		if (s>5)
 		{
 			printf("* * * * i=%d,s=%d,k=%d\n", i, s, k);
-			continue; //
+			continue; //调过本次循环中余下尚未执行的语句，立刻进行下一次循环的条件判断
 		}
 		k = k + s;
 		printf("i=%d,s=%d,k=%d\n", i, s, k);
@@ -547,6 +547,33 @@ int main()
 	return 0;
 }
 
+// page 64 熟悉do-while语句
+int main()
+{
+	int x, max;
+	printf("Enter -1 to end:\n");
+	do
+	{
+		printf("Enter x :");
+		scanf("%d", &x);
+	} while (x<0&&x!= -1);
+	max = x;
+	while (x!= -1)
+	{
+		printf("Enter x:");
+		scanf("%d", &x);
+		if (x>0&&x>max)
+		{
+			max = x;
+		}
+		if (max != -1)
+		{
+			printf("max=%d\n", max);
+		}
+	}
+	system("pause");
+	return 0;
+}
 
 
 
