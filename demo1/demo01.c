@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+//高级语言的特性之一就是通过名字，而不是地址来访问内存的位置，即用名字来代替地址
+
 // page 09 浮点型
 int mainpage09()
 {
@@ -547,7 +549,7 @@ int mainpage6401()
 	return 0;
 }
 
-// page 64 熟悉do-while语句
+// page 64 熟悉do-while语句，从若干个输入的正整数中，选出最大值，用-1结束
 int mainpage6402()
 {
 	int x, max;
@@ -561,35 +563,58 @@ int mainpage6402()
 	while (x!= -1)
 	{
 		printf("Enter x:");
-		scanf("%d", &x);
-		if (x>0&&x>max)
+		scanf("%d",&x);
+		if (x>0&& x>max)
 		{
 			max = x;
 		}
-		if (max != -1)
-		{
-			printf("max=%d\n", max);
-		}
+	}
+	if (max != -1)
+	{
+		printf("max=%d\n", max);
 	}
 	system("pause");
 	return 0;
 }
 
-// page 64 从若干个输入的正整数中，选出最大值，用-1结束
-int main()
+// page 65 迭代法求数的平方根
+int mainpage65()
 {
-	int x, max;
-	printf("Enter -1 to end:\n");
-	do
+	float a, x0, x1;
+	printf("\nInput a:");
+	scanf("%f", &a);
+	if (a < 0)
 	{
-		printf("Enter x :");
-		scanf("%d", &x);
-	} while (x<0&&x!= -1);
-	max = x;
-	while (x!= -1)
-	{
-		printf("Enter x :");
+		printf("error!\n");
 	}
+	else
+	{
+		x0 = a / 2;
+		x1 = (x0 + a / x0) / 2;
+		do
+		{
+			x0 = x1;
+			x1 = (x0 + a / x0) / 2;
+		} while (fabs(x0-x1)>1e-6);
+		printf("sqrt(%f)=%f标准sqrt(%f)=%f\n", a, x1, a, sqrt(a));
+	}
+	system("pause");
+	return 0;
 }
 
-
+// page 66 习题计算
+int main()
+{
+	int k, j, s;
+	for ( k = 2; k < 6; k++,k++) //两个k++就是一次加2
+	{
+		s = 1;
+		for ( j = k; j < 6; j++)
+		{
+			s += j;
+		}
+	}
+	printf("%d\n", s);
+	system("pause");
+	return 0;
+}
