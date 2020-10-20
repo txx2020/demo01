@@ -14,7 +14,7 @@ int mainpage09()
 	b=3.6;
 	area =a*b;
 	printf("a=%f,b=%f,area=%f\n",a,b,area);
-	 system("pause");//用来暂停窗口的，需要调用"stdlib"头文件
+	system("pause");//用来暂停窗口的，需要调用"stdlib"头文件
 	return 0;
 }
 
@@ -723,9 +723,9 @@ int mainpage6705()
 }
 
 // page 68 习题计算
-int main()
+int main6801()
 {
-	int x, j;
+	int x, i;
 	for ( i = 1; i < 100; i++)
 	{
 		x = i;
@@ -743,4 +743,73 @@ int main()
 	printf("\n");
 	system("pause");
 	return 0;
+}
+
+// page 68 习题计算
+int mainpage6802()
+{
+	int a, b, c, d, i, j, k;
+	a = 10;
+	b = c = d = 5;
+	i = j = k = 0;
+	for (;  a>b; ++b)	//	b 5 6 7 8 9 10
+	{
+		i++;			//	i 1 2 3 4 5 停止
+	}
+	while (a>++c)		//	c 6 7 8 9 10
+	{
+		j++;			//	j 1 2 3 4 停止
+	}
+	do
+	{
+		k++;			// k 1 2 3 4 5 停止
+	} while (a>d++);	// d 6 7 8 9 10
+}
+
+// page 68 习题计算
+int mainpage6803()
+{
+	int k, n, m;
+	n = 10;
+	m = 1;
+	k = 1;
+	while (k++<=n)
+	{
+		m *= 2;
+	}
+	printf("%d\n", m);
+	system("pause");
+	return 0;
+}
+
+// page 69 习题计算
+int mainpage6901()
+{
+	int x = 2;
+	while (x--)
+	{
+
+	}
+	printf("%d\n", x);
+	system("pause");
+	return 0;
+}
+
+// page 69 习题计算
+int mainpage69()
+{
+	int i = 0, sum = 1;
+	do
+	{
+		sum += i++;
+	} while (i<5);
+	printf("%d\n", sum);
+	system("pause");
+	return 0;
+}
+
+// page 69 习题计算
+int main()
+{
+
 }
