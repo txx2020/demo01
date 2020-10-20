@@ -796,7 +796,7 @@ int mainpage6901()
 }
 
 // page 69 习题计算
-int mainpage69()
+int mainpage6902()
 {
 	int i = 0, sum = 1;
 	do
@@ -809,7 +809,45 @@ int mainpage69()
 }
 
 // page 69 习题计算
+int mainpage6903()      //未完成
+{
+	float x, amax, amin;
+	//scanf("%f", &x);
+	//while ()
+	//{
+	//	if (x>amax)
+	//	{
+	//		amax = x;
+	//	}
+	//	if (true)
+	//	{
+	//		amin = x;
+	//	}
+
+	//}
+	printf("\namax=%f\namin=%f\n", amax, amin);
+	system("pause");
+	return 0;
+}
+
+// page 预留位置
+
+
+// page 76  输入26个大写字母和ASXII
 int main()
 {
-
+	char ch;
+	int i;
+	for ( i = 0; i < 26; i++)
+	{
+		ch = i + 65;
+		if (i%2==0)
+		{
+			printf("\n");
+		}
+		printf("  c=%c  ASCII= %d", ch, ch);
+	}
+	putchar('\n');
+	system("pause");
+	return 0;
 }
