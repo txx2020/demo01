@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <ctype.h>
 
 //高级语言的特性之一就是通过名字，而不是地址来访问内存的位置，即用名字来代替地址
 
@@ -834,7 +835,7 @@ int mainpage6903()      //未完成
 
 
 // page 76  输入26个大写字母和ASXII
-int main()
+int mainpage7601()
 {
 	char ch;
 	int i;
@@ -850,4 +851,56 @@ int main()
 	putchar('\n');
 	system("pause");
 	return 0;
+}
+
+// page 76 上面程序修改版
+int mainpage7602()
+{
+	char ch;
+	int i;
+	for ( i = 0; i < 26; i++)
+	{
+		ch = i + 65;
+		if (i%2==0)
+		{
+			printf("\n");
+		}
+		printf("  c=%c  ASCII=%d", ch, ch);
+	}
+	printf("Please Enter to continue\n"); 
+	putchar('\n');
+}
+
+// page 76 修改版
+int mainpage7603()
+{
+	char c;
+	while ((c = getchar()) != '\n')
+	{
+		if (c>='a'&&c<='z')
+		{
+			c = c - 'a' + 'A';
+		}
+		putchar(c);
+	}
+	putchar('\n');
+
+ }
+
+// page 77 统计字符中的指定输入，此处用到了<ctype.h>头文件
+int main()
+{
+	char c;
+	c = getchar();
+	while (c!='@')
+	{
+		if (isalpha(a))
+		{
+			c = tolower(c);
+			c = (c - 'a' + 1) % 26 + 'a';
+		}
+		putchar(c);
+		c = getchar();
+	}
+	printf("\n");
 }
