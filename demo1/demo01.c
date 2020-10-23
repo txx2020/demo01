@@ -888,13 +888,13 @@ int mainpage7603()
  }
 
 // page 77 统计字符中的指定输入，此处用到了<ctype.h>头文件
-int main()
+int main7701()
 {
 	char c;
 	c = getchar();
 	while (c!='@')
 	{
-		if (isalpha(a))
+		if (isalpha(c))
 		{
 			c = tolower(c);
 			c = (c - 'a' + 1) % 26 + 'a';
@@ -903,4 +903,24 @@ int main()
 		c = getchar();
 	}
 	printf("\n");
+}
+
+//page 77 上面代码修改版
+int main() //报错
+{
+	char c;
+	c = getchar;
+	while (c != '@')
+	{
+		if (isalpha(c))
+		{
+			c = tolower(c);
+			c = (c - 'a' + 1) % 26 + 'a';
+		}
+		putchar(c);
+		c = getchar();
+
+	}
+	printf("\n");
+
 }
